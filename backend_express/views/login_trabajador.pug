@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    div(align='center')
+        h3 Trabajador
+        form(action='http://localhost:3000/login_trabajador', method='POST')
+            div
+                label(for='correo_trabajador') Correo
+                br 
+                input(type='email', name='email_trabajador', placeholder='correovalido@correo.com')
+            div
+                label(for='fono_trabajador') Teléfono
+                br
+                input(type='text', name='fono_trabajador', placeholder='3232322332', maxlength='10')
+            div
+                br
+                input(type='submit', value='Iniciar Sesión', title='Iniciar sesión')
+        br
+        h1 #{error}
+        br
+        br
+        b ¿Aún no trabajas con nosotros? 
+        a(href='registro_trabajador') Regístrate aquí
+        

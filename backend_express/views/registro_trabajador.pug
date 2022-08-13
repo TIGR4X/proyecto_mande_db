@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    div(align='center')
+        form(action='http://localhost:3000/registro_trabajador', method='POST')
+          div
+            label(for='fono_trabajador') Teléfono
+            br
+            input(type='text', placeholder='3233232332' name='fono_trabajador', required, maxlength='10')
+          div
+            label(for='cedula_trabajador') Cédula
+            br
+            input(type='text', placeholder='' name='cedula_trabajador', required, maxlength='10')
+          div
+            label(for='nombre_trabajador') Nombre
+            br
+            input(type='text', placeholder='' name='nombre_trabajador', required)
+          div
+            label(for='apellido_trabajador') Apellido
+            br
+            input(type='text', placeholder='' name='apellido_trabajador', required)
+          div
+            label(for='email-trabajador') Email
+            br
+            input(type='text', placeholder='' name='email_trabajador', required)
+          div
+            label(for='direccion_trabajador') Dirección
+            br
+            input(type='text', placeholder='' name='direccion_trabajador', required)
+          div
+            label(for='browser') Escoja una labor en la que desee desempeñarse (Luego podrá añadir más)
+            br 
+            select(name='labor')
+              option(value='1') Limpieza
+              option(value='2') Profesor
+              option(value='3') Cuidado
+          div
+            label(for='foto_cedula_trabajador') Necesitamos una foto de su cédula para identificar su identidad
+            br
+            input(type='file', accept='image/*', placeholder='' name='foto_cedula_trabajador')
+          div
+            label(for='foto_perfil_trabajador') Ingrese una foto de perfil
+            br
+            input(type='file', accept='image/*', placeholder='' name='foto_perfil_trabajador')
+          div
+            br
+            input(type='submit', value='Registrarse', title='Registrarse')
+        br
+        h1 #{error}

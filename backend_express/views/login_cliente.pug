@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(align='center')
+        form(action='http://localhost:3000/login_cliente', method='POST')
+            div 
+                label(for='correo_cliente') Correo
+                br 
+                input#correo_cliente(type='email', name='email_cliente', placeholder='correovalido@correo.com')
+            div
+                label(for='fono_cliente') Teléfono
+                br
+                input#fono_cliente(type='text', name='fono_cliente', placeholder='3232322332', maxlength='10')
+            div
+                br
+                input#boton_login_c(type='submit', value='Iniciar Sesión', title='Iniciar sesión')
+        br
+        h1 #{error}
+        br
+        br
+        b ¿No tienes cuenta? 
+        a(href='crear') Regístrate aquí
+ 
