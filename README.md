@@ -1,11 +1,6 @@
 # Descripción del Proyecto
 Plataforma para encontrar quien haga las cosas por ti por servicios
 
-Link al video del proyecto
-
-#### Create: Mediante el registro de clientes y personas interesadas en trabajar para la plataforma MandeApp
-#### Read: Mediante la validación de inicio de sesión en los login correspondientes a cliente y a trabajador.
-
 # Codigo de Despliegue de Contenedores
 
 ## Contenedor para la Base de Datos
